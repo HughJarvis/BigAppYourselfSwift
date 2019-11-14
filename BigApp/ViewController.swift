@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let complimentService = ComplimentService()
 
     @IBOutlet weak var keywordField: UITextField!
     @IBOutlet weak var complimentView: UITextView!
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func goTapped(_ sender: Any) {
         print("button was tapped and \(keywordField.text!) was in the input field")
+        complimentService.getCompliment()
     }
 }
 
