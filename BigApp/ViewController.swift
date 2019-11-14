@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func goTapped(_ sender: Any) {
-        print("button was tapped")
+        print("button was tapped and \(keywordField.text!) was in the input field")
     }
 }
 
