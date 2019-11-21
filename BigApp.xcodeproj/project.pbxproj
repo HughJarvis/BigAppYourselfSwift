@@ -14,6 +14,7 @@
 		280760BB237D797B00683CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280760BA237D797B00683CDB /* Assets.xcassets */; };
 		280760BE237D797B00683CDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280760BC237D797B00683CDB /* LaunchScreen.storyboard */; };
 		280760C6237D82D300683CDB /* ComplimentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280760C5237D82D300683CDB /* ComplimentService.swift */; };
+		28106CEB238053B2006B3DF6 /* Compliment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28106CEA238053B2006B3DF6 /* Compliment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		280760BD237D797B00683CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280760BF237D797B00683CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280760C5237D82D300683CDB /* ComplimentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplimentService.swift; sourceTree = "<group>"; };
+		28106CEA238053B2006B3DF6 /* Compliment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compliment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				280760B1237D797B00683CDB /* AppDelegate.swift */,
 				280760B3237D797B00683CDB /* SceneDelegate.swift */,
 				280760C5237D82D300683CDB /* ComplimentService.swift */,
+				28106CEA238053B2006B3DF6 /* Compliment.swift */,
 				280760B5237D797B00683CDB /* ViewController.swift */,
 				280760B7237D797B00683CDB /* Main.storyboard */,
 				280760BA237D797B00683CDB /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				280760B2237D797B00683CDB /* AppDelegate.swift in Sources */,
 				280760B4237D797B00683CDB /* SceneDelegate.swift in Sources */,
 				280760C6237D82D300683CDB /* ComplimentService.swift in Sources */,
+				28106CEB238053B2006B3DF6 /* Compliment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

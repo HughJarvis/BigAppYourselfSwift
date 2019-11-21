@@ -11,12 +11,14 @@ import Foundation
 
 class ComplimentService {
     
-    func getCompliment(){
+    
+    
+    func getCompliment() -> Void {
         //var compliment: String = "You are a wonderful human being"
-        let defaultSession = URLSession.shared
+        
         //only using force unwrap because I know hard-coded url is correct
         let url = URL(string: "https://bigappyourselfspring.herokuapp.com/compliment")!
-        let task = defaultSession.dataTask(with: url) {data, response, error in
+        let task = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
             
             if error != nil || data == nil {
                 print("Client error!")
@@ -27,20 +29,23 @@ class ComplimentService {
                 print("Server error!")
                 return
             }
-            
+
             guard let mime = response.mimeType, mime == "application/json" else {
                 print("Wrong MIME type!")
                 return
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                print(json)
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                if let compliment = json?["content"] as? String {
+                    print(compliment)
+                    
+                }
             } catch {
                 print("JSON error: \(error.localizedDescription)")
             }
             
-        }
+        })
     
         task.resume()
         
