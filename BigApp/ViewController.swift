@@ -26,6 +26,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func goTapped(_ sender: Any) {
+        complimentView.text! = "button was tapped and \(keywordField.text!) was in the input field"
+        
         print("button was tapped and \(keywordField.text!) was in the input field")
         complimentService.getCompliment()
     }

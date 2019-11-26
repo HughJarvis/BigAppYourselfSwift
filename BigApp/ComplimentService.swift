@@ -14,7 +14,7 @@ class ComplimentService {
     
     
     func getCompliment() -> Void {
-        //var compliment: String = "You are a wonderful human being"
+        
         
         //only using force unwrap because I know hard-coded url is correct
         let url = URL(string: "https://bigappyourselfspring.herokuapp.com/compliment")!
