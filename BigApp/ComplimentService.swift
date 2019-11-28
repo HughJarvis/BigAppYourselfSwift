@@ -13,7 +13,7 @@ class ComplimentService {
     
     
     
-    func getCompliment() -> Void {
+    func getCompliment(complimentCompletionHandler: @escaping (String?, Error?) -> Void) -> Void {
         
         
         //only using force unwrap because I know hard-coded url is correct
@@ -38,8 +38,7 @@ class ComplimentService {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
                 if let compliment = json?["content"] as? String {
-                    print(compliment)
-                    
+                    complimentCompletionHandler(compliment, nil)
                 }
             } catch {
                 print("JSON error: \(error.localizedDescription)")

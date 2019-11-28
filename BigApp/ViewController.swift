@@ -26,10 +26,20 @@ class ViewController: UIViewController {
 
 
     @IBAction func goTapped(_ sender: Any) {
-        complimentView.text! = "button was tapped and \(keywordField.text!) was in the input field"
+        complimentView.font = UIFont.systemFont(ofSize: 14)
+        complimentView.text! = "preparing compliment..."
         
-        print("button was tapped and \(keywordField.text!) was in the input field")
-        complimentService.getCompliment()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        
+        self.complimentService.getCompliment(complimentCompletionHandler: { compliment, error in
+            if let compliment = compliment {
+                DispatchQueue.main.async    {
+                    self.complimentView.text = compliment;
+                    self.complimentView.font = UIFont.systemFont(ofSize: 24)
+                }
+            }
+        })
+        }
     }
 }
 
