@@ -10,45 +10,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BigApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Big_App_Yourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This bit doesn't do anything...yet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-hR-pjf">
-                                <rect key="frame" x="72" y="432" width="284" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This bit doesn't do anything...yet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-hR-pjf">
+                                <rect key="frame" x="30" y="454" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mh-R6-cvX">
-                                <rect key="frame" x="72" y="482" width="284" height="30"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mh-R6-cvX">
+                                <rect key="frame" x="50" y="518" width="314" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.18013255011693707" blue="0.82976796527375707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Compliment me"/>
+                                <state key="normal" title="Compliment me">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="goTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSc-Dq-h2M"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="All compliments guaranteed 100% sincere." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-cf-sLA">
-                                <rect key="frame" x="94" y="520" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigAppBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-9f-UNI">
+                                <rect key="frame" x="23" y="44" width="380" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0vU-9f-UNI" secondAttribute="height" multiplier="1:1" id="TSa-D9-4RF"/>
+                                    <constraint firstAttribute="height" constant="380" id="uC0-NL-Vob"/>
+                                    <constraint firstAttribute="width" constant="380" id="xpB-dJ-FEN"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="All compliments guaranteed 100% sincere." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-cf-sLA">
+                                <rect key="frame" x="30" y="588" width="354" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="RX3-ct-63v"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.75924025120265781" green="0.98039215690000003" blue="0.018554473901622636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="X7U-cf-sLA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="2Ni-gf-jMY"/>
-                            <constraint firstItem="X7U-cf-sLA" firstAttribute="top" secondItem="5Mh-R6-cvX" secondAttribute="bottom" constant="17" id="3my-2j-tSc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X7U-cf-sLA" secondAttribute="bottom" constant="214" id="CSi-0y-euw"/>
-                            <constraint firstItem="5Mh-R6-cvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="Fin-ZH-mvM"/>
-                            <constraint firstItem="5Mh-R6-cvX" firstAttribute="top" secondItem="OmV-hR-pjf" secondAttribute="bottom" constant="8" id="Jcg-ox-5Jj"/>
-                            <constraint firstItem="OmV-hR-pjf" firstAttribute="trailing" secondItem="X7U-cf-sLA" secondAttribute="trailing" id="bjS-cy-7ca"/>
-                            <constraint firstItem="X7U-cf-sLA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOH-Ku-Ckh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Mh-R6-cvX" secondAttribute="trailing" constant="102" id="jAJ-z8-SET"/>
-                            <constraint firstItem="OmV-hR-pjf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kb9-vM-oPk"/>
-                            <constraint firstItem="OmV-hR-pjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="xxl-ah-7UT"/>
+                            <constraint firstItem="X7U-cf-sLA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2Ni-gf-jMY"/>
+                            <constraint firstItem="5Mh-R6-cvX" firstAttribute="top" secondItem="OmV-hR-pjf" secondAttribute="bottom" constant="30" id="8Br-dP-QGd"/>
+                            <constraint firstItem="5Mh-R6-cvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Fin-ZH-mvM"/>
+                            <constraint firstItem="0vU-9f-UNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6" id="I9b-2a-wNg"/>
+                            <constraint firstItem="X7U-cf-sLA" firstAttribute="top" secondItem="5Mh-R6-cvX" secondAttribute="bottom" constant="30" id="LTB-J7-QIF"/>
+                            <constraint firstItem="0vU-9f-UNI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XYJ-J0-tNI"/>
+                            <constraint firstItem="X7U-cf-sLA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z6D-c9-KtP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X7U-cf-sLA" secondAttribute="trailing" constant="30" id="ajV-Pu-XyC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Mh-R6-cvX" secondAttribute="trailing" constant="50" id="jAJ-z8-SET"/>
+                            <constraint firstItem="OmV-hR-pjf" firstAttribute="top" secondItem="0vU-9f-UNI" secondAttribute="bottom" constant="30" id="jl8-CI-6Wt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OmV-hR-pjf" secondAttribute="trailing" constant="30" id="k94-Lb-E3u"/>
+                            <constraint firstItem="X7U-cf-sLA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qVJ-7V-cWJ"/>
+                            <constraint firstItem="OmV-hR-pjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ztH-eG-b6e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -62,4 +79,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BigAppBanner.png" width="512" height="512"/>
+    </resources>
 </document>

@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             if let compliment = compliment {
                 DispatchQueue.main.async    {
                     self.complimentView.text = compliment;
-                    self.complimentView.font = UIFont.systemFont(ofSize: 24)
+                    self.complimentView.font = UIFont.systemFont(ofSize: 30)
                 }
             }
         })
